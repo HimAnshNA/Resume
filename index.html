@@ -6,6 +6,7 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
       margin: 0;
       padding: 0;
       background: #fff;
@@ -15,7 +16,7 @@
     .resume {
       width: 794px; 
       margin: 0 auto;
-      padding: 20px 40px;
+      padding: 10px 15px;
       box-sizing: border-box;
     }
     /* Header */
@@ -31,28 +32,31 @@
     }
     .contact {
       text-align: right;
-      font-size: 14px;
+      font-size: 11px;
     }
     .contact a {
       color: #0366d6;
       text-decoration: none;
     }
     .section {
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
     .section h3 {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: bold;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid #000; /* full-width line */
       margin-bottom: 6px;
       padding-bottom: 2px;
+      width: 100%;
+      display: block;
     }
     .section ul {
-      margin: 4px 0 4px 20px;
+      margin: 2px 0 2px 20px;
       padding: 0;
     }
+    
     .section li {
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .two-col {
       display: flex;
@@ -62,22 +66,68 @@
       text-align: right;
     }
     p {
-      margin: 4px 0;
+      margin: 2px 0;
     }
     .small {
-      font-size: 13px;
+      font-size: 10px;
     }
+    hr.section-line {
+      border: none;
+      border-top: 1px solid #000;
+      margin: 0 0 10px 0;
+    }
+
+
+    
+
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .resume {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .two-col {
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  p, li {
+    font-size: 12px;
+  }
+
+  .small {
+    font-size: 10px;
+  }
+
+  hr.section-line {
+    margin-bottom: 6px;
+  }
+}
+
+
+    
   </style>
 </head>
-<body >
+<body>
   <div class="resume">
 
+    <!-- Header -->
     <div class="header">
       <div class="name">Himanshu Namdeo</div>
       <div class="contact">
         Location: Sagar, M.P.<br>
-        Phone: +91 6260064871<br>
-        Email: <a href="mailto:gthimna@gmail.com">gthimna@gmail.com</a><br>
+        <a href="tel:+916260064871">+91 6260064871</a> | <a href="mailto:gthimna@gmail.com">gthimna@gmail.com</a><br>
         <a href="https://github.com/Himanshna">Github</a> | 
         <a href="http://www.linkedin.com/in/himanshna">LinkedIn</a> | 
         <a href="https://himanshna.github.io/AlphawizzWeb/">Project</a> | 
@@ -86,10 +136,13 @@
       </div>
     </div>
 
+    <!-- Intro paragraph with line above -->
     <div class="section">
+      <hr class="section-line">
       <p>Aspiring Full Stack Developer with hands-on experience in the MERN stack, Python. Skilled in designing, testing, and deploying scalable software solutions, with strong problem-solving and communication abilities. Eager to contribute to innovative projects through teamwork and continuous learning in a dynamic development environment.</p>
     </div>
 
+    <!-- Technical Skills -->
     <div class="section">
       <h3>Technical Skills</h3>
       <ul>
@@ -101,15 +154,17 @@
       </ul>
     </div>
 
+    <!-- Soft Skills -->
     <div class="section">
       <h3>Soft Skills</h3>
       <p>Team Collaboration • Analytical Thinking • Adaptability • Problem Solving • Communication</p>
     </div>
 
+    <!-- Internship Experience -->
     <div class="section">
       <h3>Internship Experience</h3>
       <div class="two-col">
-        <div><b>Alphawizz Technologies Pvt. Ltd. | Software Development Intern</b></div>
+        <div><b>Alphawizz Technologies Pvt. Ltd. | Software Developer Intern</b></div>
         <div class="right small">Indore, M.P. | Jan 2025 – Apr 2025</div>
       </div>
       <ul>
@@ -129,6 +184,7 @@
       </ul>
     </div>
 
+    <!-- Projects -->
     <div class="section">
       <h3>Projects</h3>
       <div class="two-col">
@@ -159,18 +215,33 @@
       </ul>
     </div>
 
-    <div class="section">
-      <h3>Certification</h3>
-      <ul>
-        <li>Accenture Developer and Technology Virtual Internship | By: Accenture | UK | Jul 2025</li>
-        <li>Hewlett Packard Enterprise Software Engineering VI | By: HPE | May 2025 – Jul 2025</li>
-        <li>Full Stack (MERN) Development | By: The Internspires | Indore, M.P. | Jul 2024 – Oct 2024</li>
-        <li>Geospatial Analysis Using Google Earth Engine | By: ISRO + IIRS | Dehradun | Jan 2024 – Feb 2024</li>
-        <li>Data Science & Python | By: First Bit Solutions | Pune | Oct 2023 – Jul 2024</li>
-      </ul>
-    </div>
+    <!-- Certification -->
+   <div class="section">
+  <h3>Certification</h3>
+  <div class="two-col">
+    <div>Accenture Developer and Technology Virtual Internship | By: Accenture </div>
+    <div class="right small">UK | Jul 2025</div>
+  </div>
+  <div class="two-col">
+    <div>Hewlett Packard Enterprise Software Engineering VI | By: HPE</div>
+    <div class="right small">May 2025 – Jul 2025</div>
+  </div>
+  <div class="two-col">
+    <div>Full Stack (MERN) Development | By: The Internspires</div>
+    <div class="right small">Indore, M.P. | Jul 2024 – Oct 2024</div>
+  </div>
+  <div class="two-col">
+    <div>Geospatial Analysis Using Google Earth Engine | By: ISRO + IIRS</div>
+    <div class="right small">Dehradun | Jan 2024 – Feb 2024</div>
+  </div>
+  <div class="two-col">
+    <div>Data Science & Python | By: First Bit Solutions</div>
+    <div class="right small">Pune | Oct 2023 – Jul 2024</div>
+  </div>
+</div>
 
 
+    <!-- Education -->
     <div class="section">
       <h3>Education</h3>
       <div class="two-col">
@@ -199,14 +270,16 @@
       </ul>
     </div>
 
-    <div class="two-col">
-      <div class="section">
-        <h3>Hobbies</h3>
-        <p>Blogging, Animation</p>
+    <!-- Hobbies & Languages with one line under headings -->
+    <div class="section">
+      <div class="two-col">
+        <div><b>Hobbies</b></div>
+        <div class="right"><b>Languages</b></div>
       </div>
-      <div class="section right">
-        <h3>Languages</h3>
-        <p>Hindi, English</p>
+      <hr style="border: none; border-top: 1px solid #000; margin: 4px 0;">
+      <div class="two-col">
+        <div>Blogging, Animation</div>
+        <div class="right">Hindi, English</div>
       </div>
     </div>
 
